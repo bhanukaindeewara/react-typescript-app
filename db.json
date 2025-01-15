@@ -1,0 +1,287 @@
+{
+  "websites": [
+    {
+      "id": 1,
+      "title": "laravel.com",
+      "description": "A PHP framework for web artisans."
+    },
+    {
+      "id": 2,
+      "title": "react.dev",
+      "description": "A JavaScript library for building user interfaces."
+    },
+    {
+      "id": 3,
+      "title": "typescriptlang.org",
+      "description": "A strongly typed programming language that builds on JavaScript."
+    },
+    {
+      "id": 4,
+      "title": "vuejs.org",
+      "description": "A progressive JavaScript framework for building UIs."
+    },
+    {
+      "id": 5,
+      "title": "angular.dev",
+      "description": "A platform for building mobile and desktop web applications using TypeScript and JavaScript."
+    },
+    {
+      "id": 6,
+      "title": "svelte.dev",
+      "description": "A radical new approach to building user interfaces."
+    },
+    {
+      "id": 7,
+      "title": "djangoproject.com",
+      "description": "A Python framework for perfectionists with deadlines."
+    },
+    {
+      "id": 8,
+      "title": "rubyonrails.org",
+      "description": "A web application framework optimized for programmer happiness and sustainable productivity."
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "websiteId": 1,
+      "title": "Laravel: Introduction",
+      "description": "A beginner's guide to Laravel."
+    },
+    {
+      "id": 2,
+      "websiteId": 1,
+      "title": "Laravel Routing Basics",
+      "description": "Learn about routing in Laravel."
+    },
+    {
+      "id": 3,
+      "websiteId": 1,
+      "title": "Working with Eloquent",
+      "description": "An overview of Eloquent ORM in Laravel."
+    },
+    {
+      "id": 4,
+      "websiteId": 1,
+      "title": "Laravel Middleware",
+      "description": "Understanding middleware in Laravel."
+    },
+    {
+      "id": 5,
+      "websiteId": 1,
+      "title": "Laravel Authentication",
+      "description": "How to implement authentication in Laravel."
+    },
+    {
+      "id": 6,
+      "websiteId": 2,
+      "title": "React Basics",
+      "description": "An introduction to React.js."
+    },
+    {
+      "id": 7,
+      "websiteId": 2,
+      "title": "React State Management",
+      "description": "Managing state in React applications."
+    },
+    {
+      "id": 8,
+      "websiteId": 2,
+      "title": "React Hooks Overview",
+      "description": "A quick guide to React Hooks."
+    },
+    {
+      "id": 9,
+      "websiteId": 2,
+      "title": "React Router",
+      "description": "How to implement routing in React."
+    },
+    {
+      "id": 10,
+      "websiteId": 2,
+      "title": "React Performance Optimization",
+      "description": "Improving performance in React applications."
+    },
+    {
+      "id": 11,
+      "websiteId": 3,
+      "title": "TypeScript Basics",
+      "description": "Introduction to TypeScript syntax."
+    },
+    {
+      "id": 12,
+      "websiteId": 3,
+      "title": "Advanced TypeScript Types",
+      "description": "Exploring advanced types in TypeScript."
+    },
+    {
+      "id": 13,
+      "websiteId": 3,
+      "title": "TypeScript and React",
+      "description": "Using TypeScript with React."
+    },
+    {
+      "id": 14,
+      "websiteId": 3,
+      "title": "TypeScript Decorators",
+      "description": "Understanding decorators in TypeScript."
+    },
+    {
+      "id": 15,
+      "websiteId": 3,
+      "title": "TypeScript Configuration",
+      "description": "Configuring TypeScript for your project."
+    },
+    {
+      "id": 16,
+      "websiteId": 4,
+      "title": "Vue.js Introduction",
+      "description": "Learn the basics of Vue.js."
+    },
+    {
+      "id": 17,
+      "websiteId": 4,
+      "title": "Vue.js Directives",
+      "description": "Working with directives in Vue.js."
+    },
+    {
+      "id": 18,
+      "websiteId": 4,
+      "title": "Vue.js Components",
+      "description": "How to create and use components in Vue.js."
+    },
+    {
+      "id": 19,
+      "websiteId": 4,
+      "title": "Vuex for State Management",
+      "description": "Managing state with Vuex in Vue.js."
+    },
+    {
+      "id": 20,
+      "websiteId": 4,
+      "title": "Vue.js Routing",
+      "description": "Setting up routing with Vue Router."
+    },
+    {
+      "id": 21,
+      "websiteId": 5,
+      "title": "Getting Started with Angular",
+      "description": "The basics of building an Angular app."
+    },
+    {
+      "id": 22,
+      "websiteId": 5,
+      "title": "Angular Components",
+      "description": "How to create and use components in Angular."
+    },
+    {
+      "id": 23,
+      "websiteId": 5,
+      "title": "Angular Directives",
+      "description": "An overview of directives in Angular."
+    },
+    {
+      "id": 24,
+      "websiteId": 5,
+      "title": "Angular Routing",
+      "description": "Setting up routing in Angular."
+    },
+    {
+      "id": 25,
+      "websiteId": 5,
+      "title": "Angular Services",
+      "description": "Creating and using services in Angular."
+    },
+    {
+      "id": 26,
+      "websiteId": 6,
+      "title": "Introduction to Svelte",
+      "description": "Get started with Svelte.js."
+    },
+    {
+      "id": 27,
+      "websiteId": 6,
+      "title": "Svelte Reactive Programming",
+      "description": "Reactive programming in Svelte."
+    },
+    {
+      "id": 28,
+      "websiteId": 6,
+      "title": "Svelte Components",
+      "description": "Building reusable components in Svelte."
+    },
+    {
+      "id": 29,
+      "websiteId": 6,
+      "title": "Svelte Store",
+      "description": "Using the Svelte store for state management."
+    },
+    {
+      "id": 30,
+      "websiteId": 6,
+      "title": "Svelte Routing",
+      "description": "Setting up routing in Svelte."
+    },
+    {
+      "id": 31,
+      "websiteId": 7,
+      "title": "Django Basics",
+      "description": "Introduction to Django framework."
+    },
+    {
+      "id": 32,
+      "websiteId": 7,
+      "title": "Django Models",
+      "description": "Working with models in Django."
+    },
+    {
+      "id": 33,
+      "websiteId": 7,
+      "title": "Django Views",
+      "description": "Creating views in Django."
+    },
+    {
+      "id": 34,
+      "websiteId": 7,
+      "title": "Django Templates",
+      "description": "Using templates in Django applications."
+    },
+    {
+      "id": 35,
+      "websiteId": 7,
+      "title": "Django REST Framework",
+      "description": "Building APIs with Django REST framework."
+    },
+    {
+      "id": 36,
+      "websiteId": 8,
+      "title": "Ruby on Rails Introduction",
+      "description": "Getting started with Ruby on Rails."
+    },
+    {
+      "id": 37,
+      "websiteId": 8,
+      "title": "Ruby on Rails MVC",
+      "description": "Understanding the MVC pattern in Rails."
+    },
+    {
+      "id": 38,
+      "websiteId": 8,
+      "title": "Rails ActiveRecord",
+      "description": "Working with ActiveRecord in Rails."
+    },
+    {
+      "id": 39,
+      "websiteId": 8,
+      "title": "Rails Routing",
+      "description": "Setting up routing in Ruby on Rails."
+    },
+    {
+      "id": 40,
+      "websiteId": 8,
+      "title": "Ruby on Rails Testing",
+      "description": "Test-driven development in Ruby on Rails."
+    }
+  ],
+  "subscribers": []
+}
