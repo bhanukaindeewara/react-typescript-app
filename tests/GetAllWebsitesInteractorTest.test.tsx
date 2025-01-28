@@ -1,6 +1,6 @@
-import { describe, expect, it, vi } from "vitest"
+import { describe, expect, it } from "vitest"
 import GetAllWebsitesIntercator from "../src/domain/websites/Interactors/GetAllWebsitesIntercator.ts"
-import FakeWebsiteRepository from "../src/domain/support/FakeWebsiteRepository.ts"
+import FakeWebsiteRepository from "../src/domain/websites/repositories/FakeWebsiteRepository.ts"
 import WebsiteCollection from "../src/domain/websites/collections/WebsiteCollection.ts"
 
 describe("GetAllWebsitesInteractorTest", () => {
@@ -9,12 +9,8 @@ describe("GetAllWebsitesInteractorTest", () => {
       new FakeWebsiteRepository(),
     )
 
-    const executeSpy = vi.spyOn(getAllWebsitesIntercator, "execute")
-
     const response = await getAllWebsitesIntercator.execute()
 
-    expect(executeSpy).toHaveBeenCalled()
-    expect(executeSpy).toHaveBeenCalledTimes(1)
     expect(response).toBeInstanceOf(WebsiteCollection)
   })
 })

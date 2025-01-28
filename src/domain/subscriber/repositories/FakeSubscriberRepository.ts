@@ -1,6 +1,6 @@
-import { SubscriberRequest } from "../subscriber/interactors/requests/SubscriberRequest.ts"
-import Subscriber from "../subscriber/models/Subscriber.ts"
-import SubscriberRepository from "../subscriber/repositories/SubscriberRepository.ts"
+import { SubscriberRequest } from "../interactors/requests/SubscriberRequest.ts"
+import Subscriber from "../models/Subscriber.ts"
+import SubscriberRepository from "./SubscriberRepository.ts"
 
 class FakeSubscriberRepository extends SubscriberRepository {
   public async create(subscriberRequest: SubscriberRequest) {

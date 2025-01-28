@@ -2,8 +2,9 @@ import Post from "../models/Post.ts"
 import PostCollection from "../collections/PostCollection.ts"
 import { PostRequest } from "../interactors/requests/PostRequest.ts"
 import Http from "../../../plugins/Http.ts"
+import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
 
-class PostRepository {
+class PostRepository implements PostRepositoryContract {
   public async create(postRequest: PostRequest) {
     const response: Response = await Http.post("/posts", postRequest)
 
@@ -29,7 +30,11 @@ class PostRepository {
 
     const posts: Post[] = await response.json()
 
-    return new PostCollection(posts)
+    return new PostCollection(this.mapPosts(posts))
+  }
+
+  protected mapPosts(posts: Post[]): Post[] {
+    return posts.map((post: Post): Post => new Post(post))
   }
 }
 

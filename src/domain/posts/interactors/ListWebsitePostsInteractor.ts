@@ -1,8 +1,8 @@
 import PostCollection from "../collections/PostCollection.ts"
-import PostRepository from "../repositories/PostRepository.ts"
+import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
 
 class ListWebsitePostsInteractor {
-  constructor(protected postRepository: PostRepository) {}
+  constructor(protected postRepository: PostRepositoryContract) {}
 
   public async execute(websiteId: number): Promise<PostCollection> {
     return await this.postRepository.all(websiteId)

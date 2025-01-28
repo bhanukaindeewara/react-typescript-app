@@ -1,10 +1,10 @@
 import Post from "../models/Post.ts"
-import PostRepository from "../repositories/PostRepository.ts"
+import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
 
 class FindPostInteractor {
-  constructor(protected postRepository: PostRepository) {}
+  constructor(protected postRepository: PostRepositoryContract) {}
 
-  public async execute(postId: number): Promise<Post> {
+  public async execute(postId: number): Promise<Post | undefined> {
     return await this.postRepository.find(postId)
   }
 }
