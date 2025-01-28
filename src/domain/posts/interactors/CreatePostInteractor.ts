@@ -1,8 +1,8 @@
-import PostRepository from "../repositories/PostRepository.ts"
 import { PostRequest, PostSchema } from "./requests/PostRequest.ts"
+import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
 
 class CreatePostInteractor {
-  constructor(protected postRepository: PostRepository) {}
+  constructor(protected postRepository: PostRepositoryContract) {}
 
   public async execute(postRequest: PostRequest) {
     this.validateRequest(postRequest)

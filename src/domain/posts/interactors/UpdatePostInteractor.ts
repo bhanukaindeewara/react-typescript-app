@@ -1,9 +1,9 @@
 import Post from "../models/Post.ts"
-import PostRepository from "../repositories/PostRepository.ts"
 import { PostRequest, PostSchema } from "./requests/PostRequest.ts"
+import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
 
 class UpdatePostInteractor {
-  constructor(protected postRepository: PostRepository) {}
+  constructor(protected postRepository: PostRepositoryContract) {}
 
   public async execute(post: Post, postRequest: PostRequest) {
     this.validateRequest(postRequest)

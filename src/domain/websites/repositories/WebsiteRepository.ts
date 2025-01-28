@@ -8,7 +8,7 @@ class WebsiteRepository {
 
     const websites: Website[] = await response.json()
 
-    return new WebsiteCollection(websites)
+    return new WebsiteCollection(this.mapWebsites(websites))
   }
 
   public async find(websiteId: number): Promise<Website> {
@@ -17,6 +17,10 @@ class WebsiteRepository {
     const website: Website = await response.json()
 
     return new Website(website)
+  }
+
+  protected mapWebsites(websites: Website[]): Website[] {
+    return websites.map((website: Website): Website => new Website(website))
   }
 }
 

@@ -4,9 +4,7 @@ class WebsiteCollection {
   public websites: Website[]
 
   constructor(websites: Website[] = []) {
-    this.websites = websites.map(
-      (website: Website): Website => new Website(website),
-    )
+    this.websites = websites
   }
 
   public all() {

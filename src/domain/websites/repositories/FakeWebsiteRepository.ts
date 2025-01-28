@@ -1,6 +1,6 @@
-import Website from "../websites/models/Website.ts"
-import WebsiteCollection from "../websites/collections/WebsiteCollection.ts"
-import WebsiteRepository from "../websites/repositories/WebsiteRepository.ts"
+import Website from "../models/Website.ts"
+import WebsiteCollection from "../collections/WebsiteCollection.ts"
+import WebsiteRepository from "./WebsiteRepository.ts"
 
 class FakeWebsiteRepository extends WebsiteRepository {
   public async find(websiteId: number) {
