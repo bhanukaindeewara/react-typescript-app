@@ -4,7 +4,7 @@ class PostCollection {
   public posts: Post[]
 
   constructor(posts: Post[] = []) {
-    this.posts = posts.map((post: Post): Post => new Post(post))
+    this.posts = posts
   }
 
   public all(): Post[] {
