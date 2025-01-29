@@ -5,8 +5,9 @@ import FakeSubscriberRepository from "../src/domain/subscriber/repositories/Fake
 import Subscriber from "../src/domain/subscriber/models/Subscriber.ts"
 
 describe("CreateSubscriberInteractorTest", () => {
+  const fakeSubscriberRepository = new FakeSubscriberRepository()
   const createSubscriberInteractor = new CreateSubscriberInteractor(
-    new FakeSubscriberRepository(),
+    fakeSubscriberRepository,
   )
 
   it("should create a subscriber", async () => {
@@ -20,6 +21,9 @@ describe("CreateSubscriberInteractorTest", () => {
     expect(response).toBeInstanceOf(Subscriber)
     expect(response.email).toBe(subscriberRequest.email)
     expect(response.websiteId).toBe(subscriberRequest.websiteId)
+    expect(fakeSubscriberRepository.assertSubscribersContain(response)).toBe(
+      true,
+    )
   })
 
   it("should not create a subscriber for an invalid websiteId", async () => {

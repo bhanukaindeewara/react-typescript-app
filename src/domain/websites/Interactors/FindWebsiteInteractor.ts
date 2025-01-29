@@ -1,10 +1,10 @@
 import Website from "../models/Website.ts"
-import WebsiteRepository from "../repositories/WebsiteRepository.ts"
+import WebsiteRepositoryContract from "../contracts/WebsiteRepositoryContract.ts"
 
 class FindWebsiteInteractor {
-  constructor(protected websiteRepository: WebsiteRepository) {}
+  constructor(protected websiteRepository: WebsiteRepositoryContract) {}
 
-  public async execute(websiteId: number): Promise<Website> {
+  public async execute(websiteId: number): Promise<Website | undefined> {
     return await this.websiteRepository.find(websiteId)
   }
 }

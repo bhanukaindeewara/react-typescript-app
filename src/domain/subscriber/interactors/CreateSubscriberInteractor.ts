@@ -2,10 +2,10 @@ import {
   SubscriberRequest,
   SubscriberSchema,
 } from "./requests/SubscriberRequest.ts"
-import SubscriberRepository from "../repositories/SubscriberRepository.ts"
+import SubscriberRepositoryContract from "../contracts/SubscriberRepositoryContract.ts"
 
 class CreateSubscriberInteractor {
-  constructor(protected subscriberRepository: SubscriberRepository) {}
+  constructor(protected subscriberRepository: SubscriberRepositoryContract) {}
 
   public async execute(subscriberRequest: SubscriberRequest) {
     this.validateRequest(subscriberRequest)

@@ -5,14 +5,29 @@ import Website from "../src/domain/websites/models/Website.ts"
 
 describe("FindWebsiteInteractorTest", () => {
   it("should find a website", async () => {
-    const findWebsiteInteractor = new FindWebsiteInteractor(
-      new FakeWebsiteRepository(),
-    )
-    const websiteId = 3
+    const websites: Website[] = [
+      new Website({
+        id: 1,
+        title: "laravel.com",
+        description: "A PHP framework for web artisans.",
+      }),
+      new Website({
+        id: 2,
+        title: "react.dev",
+        description: "A JavaScript library for building user interfaces.",
+      }),
+    ]
+    const fakeWebsiteRepository = new FakeWebsiteRepository(websites)
 
-    const response = await findWebsiteInteractor.execute(websiteId)
+    const findWebsiteInteractor = new FindWebsiteInteractor(
+      fakeWebsiteRepository,
+    )
+    const websiteId = 2
+
+    const response: Website | undefined =
+      await findWebsiteInteractor.execute(websiteId)
 
     expect(response).toBeInstanceOf(Website)
-    expect(response.id).toBe(websiteId)
+    expect(response?.id).toBe(websiteId)
   })
 })

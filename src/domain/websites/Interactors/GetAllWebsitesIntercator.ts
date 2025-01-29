@@ -1,8 +1,8 @@
 import WebsiteCollection from "../collections/WebsiteCollection.ts"
-import WebsiteRepository from "../repositories/WebsiteRepository.ts"
+import WebsiteRepositoryContract from "../contracts/WebsiteRepositoryContract.ts"
 
 class GetAllWebsitesIntercator {
-  constructor(protected websiteRepository: WebsiteRepository) {}
+  constructor(protected websiteRepository: WebsiteRepositoryContract) {}
 
   public async execute(): Promise<WebsiteCollection> {
     return await this.websiteRepository.all()

@@ -1,8 +1,9 @@
 import WebsiteCollection from "../collections/WebsiteCollection.ts"
 import Website from "../models/Website.ts"
 import Http from "../../../plugins/Http.ts"
+import WebsiteRepositoryContract from "../contracts/WebsiteRepositoryContract.ts"
 
-class WebsiteRepository {
+class WebsiteRepository implements WebsiteRepositoryContract {
   public async all(): Promise<WebsiteCollection> {
     const response: Response = await Http.get("/websites")
 
