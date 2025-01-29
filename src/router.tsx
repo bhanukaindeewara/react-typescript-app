@@ -3,17 +3,17 @@ import {
   LoaderFunctionArgs,
   Navigate,
 } from "react-router-dom"
-import WebsitesIndexPage from "./pages/websites/Index.tsx"
-import PostsIndexPage from "./pages/posts/Index.tsx"
-import PostsCreatePage from "./pages/posts/Create.tsx"
-import PostsEditPage from "./pages/posts/Edit.tsx"
-import NotFoundPage from "./pages/errors/NotFound.tsx"
-import Post from "./domain/posts/models/Post.ts"
-import Website from "./domain/websites/models/Website.ts"
-import FindPostInteractor from "./domain/posts/interactors/FindPostInteractor.ts"
-import FindWebsiteInteractor from "./domain/websites/Interactors/FindWebsiteInteractor.ts"
-import PostRepository from "./domain/posts/repositories/PostRepository.ts"
-import WebsiteRepository from "./domain/websites/repositories/WebsiteRepository.ts"
+import WebsitesIndexPage from "@/pages/websites/Index.tsx"
+import PostsIndexPage from "@/pages/posts/Index.tsx"
+import PostsCreatePage from "@/pages/posts/Create.tsx"
+import PostsEditPage from "@/pages/posts/Edit.tsx"
+import NotFoundPage from "@/pages/errors/NotFound.tsx"
+import Post from "@/domain/posts/models/Post.ts"
+import Website from "@/domain/websites/models/Website.ts"
+import FindPostInteractor from "@/domain/posts/interactors/FindPostInteractor.ts"
+import FindWebsiteInteractor from "@/domain/websites/Interactors/FindWebsiteInteractor.ts"
+import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
+import WebsiteRepository from "@/domain/websites/repositories/WebsiteRepository.ts"
 
 const router = createBrowserRouter([
   {

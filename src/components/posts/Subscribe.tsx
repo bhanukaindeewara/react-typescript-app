@@ -1,16 +1,16 @@
-import Button from "../shared/Button.tsx"
-import Input from "../shared/Input.tsx"
-import CreateSubscriberInteractor from "../../domain/subscriber/interactors/CreateSubscriberInteractor.ts"
+import Button from "@/components/shared/Button.tsx"
+import Input from "@/components/shared/Input.tsx"
+import CreateSubscriberInteractor from "@/domain/subscriber/interactors/CreateSubscriberInteractor.ts"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
   SubscriberRequest,
   SubscriberSchema,
-} from "../../domain/subscriber/interactors/requests/SubscriberRequest.ts"
-import Error from "../shared/Error.tsx"
-import Validator from "../../plugins/Validator.ts"
+} from "@/domain/subscriber/interactors/requests/SubscriberRequest.ts"
+import Error from "@/components/shared/Error.tsx"
+import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
-import SubscriberRepository from "../../domain/subscriber/repositories/SubscriberRepository.ts"
+import SubscriberRepository from "@/domain/subscriber/repositories/SubscriberRepository.ts"
 
 type SubscriberProps = {
   websiteId: number

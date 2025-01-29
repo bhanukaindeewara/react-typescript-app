@@ -1,4 +1,4 @@
-import Website from "../models/Website.ts"
+import Website from "@/domain/websites/models/Website.ts"
 
 class WebsiteCollection {
   public websites: Website[]

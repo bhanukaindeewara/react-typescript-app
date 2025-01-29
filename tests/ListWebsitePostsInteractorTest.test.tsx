@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest"
-import ListWebsitePostsInteractor from "../src/domain/posts/interactors/ListWebsitePostsInteractor.ts"
-import FakePostRepository from "../src/domain/posts/repositories/FakePostRepository.ts"
-import PostCollection from "../src/domain/posts/collections/PostCollection.ts"
-import Post from "../src/domain/posts/models/Post.ts"
-import { PostRequest } from "../src/domain/posts/interactors/requests/PostRequest.ts"
+import ListWebsitePostsInteractor from "@/domain/posts/interactors/ListWebsitePostsInteractor.ts"
+import FakePostRepository from "@/domain/posts/repositories/FakePostRepository.ts"
+import PostCollection from "@/domain/posts/collections/PostCollection.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest.ts"
 
 describe("ListWebsitePostsInteractorTest", () => {
   it("should list posts of the website", async () => {

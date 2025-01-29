@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest"
-import { PostRequest } from "../src/domain/posts/interactors/requests/PostRequest"
-import FakePostRepository from "../src/domain/posts/repositories/FakePostRepository.ts"
-import Post from "../src/domain/posts/models/Post"
-import UpdatePostInteractor from "../src/domain/posts/interactors/UpdatePostInteractor.ts"
+import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest"
+import FakePostRepository from "@/domain/posts/repositories/FakePostRepository.ts"
+import Post from "@/domain/posts/models/Post"
+import UpdatePostInteractor from "@/domain/posts/interactors/UpdatePostInteractor.ts"
 
 describe("UpdatePostInteractorTest", () => {
   const fakePostRepository = new FakePostRepository()

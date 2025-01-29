@@ -1,22 +1,22 @@
-import App from "../../App.tsx"
-import Label from "../../components/shared/Label.tsx"
-import Button from "../../components/shared/Button.tsx"
+import App from "@/App.tsx"
+import Label from "@/components/shared/Label.tsx"
+import Button from "@/components/shared/Button.tsx"
 import { NavigateFunction, useLoaderData, useNavigate } from "react-router-dom"
 import { SubmitHandler, useForm } from "react-hook-form"
 import {
   PostRequest,
   PostSchema,
-} from "../../domain/posts/interactors/requests/PostRequest.ts"
+} from "@/domain/posts/interactors/requests/PostRequest.ts"
 import { zodResolver } from "@hookform/resolvers/zod"
-import CreatePostInteractor from "../../domain/posts/interactors/CreatePostInteractor.ts"
-import Input from "../../components/shared/Input.tsx"
-import TextArea from "../../components/shared/TextArea.tsx"
-import Error from "../../components/shared/Error.tsx"
-import Validator from "../../plugins/Validator.ts"
+import CreatePostInteractor from "@/domain/posts/interactors/CreatePostInteractor.ts"
+import Input from "@/components/shared/Input.tsx"
+import TextArea from "@/components/shared/TextArea.tsx"
+import Error from "@/components/shared/Error.tsx"
+import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
 import { useState } from "react"
-import Website from "../../domain/websites/models/Website.ts"
-import PostRepository from "../../domain/posts/repositories/PostRepository.ts"
+import Website from "@/domain/websites/models/Website.ts"
+import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
 
 function Create() {
   const navigate: NavigateFunction = useNavigate()

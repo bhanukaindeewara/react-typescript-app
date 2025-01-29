@@ -1,8 +1,8 @@
 import {
   SubscriberRequest,
   SubscriberSchema,
-} from "./requests/SubscriberRequest.ts"
-import SubscriberRepositoryContract from "../contracts/SubscriberRepositoryContract.ts"
+} from "@/domain/subscriber/interactors/requests/SubscriberRequest.ts"
+import SubscriberRepositoryContract from "@/domain/subscriber/contracts/SubscriberRepositoryContract.ts"
 
 class CreateSubscriberInteractor {
   constructor(protected subscriberRepository: SubscriberRepositoryContract) {}

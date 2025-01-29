@@ -1,4 +1,4 @@
-import Post from "../models/Post.ts"
+import Post from "@/domain/posts/models/Post.ts"
 
 class PostCollection {
   public posts: Post[]

@@ -1,5 +1,5 @@
-import Post from "../models/Post.ts"
-import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
 
 class FindPostInteractor {
   constructor(protected postRepository: PostRepositoryContract) {}

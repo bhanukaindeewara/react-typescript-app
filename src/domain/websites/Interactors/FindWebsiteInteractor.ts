@@ -1,5 +1,5 @@
-import Website from "../models/Website.ts"
-import WebsiteRepositoryContract from "../contracts/WebsiteRepositoryContract.ts"
+import Website from "@/domain/websites/models/Website.ts"
+import WebsiteRepositoryContract from "@/domain/websites/contracts/WebsiteRepositoryContract.ts"
 
 class FindWebsiteInteractor {
   constructor(protected websiteRepository: WebsiteRepositoryContract) {}

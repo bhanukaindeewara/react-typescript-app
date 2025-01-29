@@ -1,4 +1,4 @@
-import Button from "../shared/Button.tsx"
+import Button from "@/components/shared/Button"
 import { NavigateFunction, useNavigate } from "react-router-dom"
 
 type BannerProps = {

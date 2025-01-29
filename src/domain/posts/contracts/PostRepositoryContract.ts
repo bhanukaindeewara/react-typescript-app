@@ -1,6 +1,6 @@
-import { PostRequest } from "../interactors/requests/PostRequest.ts"
-import Post from "../models/Post.ts"
-import PostCollection from "../collections/PostCollection.ts"
+import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import PostCollection from "@/domain/posts/collections/PostCollection.ts"
 
 interface PostRepositoryContract {
   create(postRequest: PostRequest): Promise<any>

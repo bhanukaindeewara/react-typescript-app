@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest"
-import FindPostInteractor from "../src/domain/posts/interactors/FindPostInteractor.ts"
-import FakePostRepository from "../src/domain/posts/repositories/FakePostRepository.ts"
-import { PostRequest } from "../src/domain/posts/interactors/requests/PostRequest.ts"
-import Post from "../src/domain/posts/models/Post.ts"
+import FindPostInteractor from "@/domain/posts/interactors/FindPostInteractor.ts"
+import FakePostRepository from "@/domain/posts/repositories/FakePostRepository.ts"
+import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest.ts"
+import Post from "@/domain/posts/models/Post.ts"
 
 describe("FindPostInteractorTest", () => {
   it("should find a post", async () => {

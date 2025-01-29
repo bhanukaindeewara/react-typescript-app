@@ -1,7 +1,7 @@
-import { PostRequest } from "../interactors/requests/PostRequest.ts"
-import Post from "../models/Post.ts"
-import PostCollection from "../collections/PostCollection.ts"
-import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
+import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import PostCollection from "@/domain/posts/collections/PostCollection.ts"
+import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
 
 class FakePostRepository implements PostRepositoryContract {
   private posts: Post[]

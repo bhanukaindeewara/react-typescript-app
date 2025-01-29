@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest"
-import { SubscriberRequest } from "../src/domain/subscriber/interactors/requests/SubscriberRequest.ts"
-import CreateSubscriberInteractor from "../src/domain/subscriber/interactors/CreateSubscriberInteractor.ts"
-import FakeSubscriberRepository from "../src/domain/subscriber/repositories/FakeSubscriberRepository.ts"
-import Subscriber from "../src/domain/subscriber/models/Subscriber.ts"
+import { SubscriberRequest } from "@/domain/subscriber/interactors/requests/SubscriberRequest.ts"
+import CreateSubscriberInteractor from "@/domain/subscriber/interactors/CreateSubscriberInteractor.ts"
+import FakeSubscriberRepository from "@/domain/subscriber/repositories/FakeSubscriberRepository.ts"
+import Subscriber from "@/domain/subscriber/models/Subscriber.ts"
 
 describe("CreateSubscriberInteractorTest", () => {
   const fakeSubscriberRepository = new FakeSubscriberRepository()

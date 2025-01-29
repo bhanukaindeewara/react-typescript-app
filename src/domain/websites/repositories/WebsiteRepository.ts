@@ -1,7 +1,7 @@
-import WebsiteCollection from "../collections/WebsiteCollection.ts"
-import Website from "../models/Website.ts"
-import Http from "../../../plugins/Http.ts"
-import WebsiteRepositoryContract from "../contracts/WebsiteRepositoryContract.ts"
+import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.ts"
+import Website from "@/domain/websites/models/Website.ts"
+import Http from "@/plugins/Http.ts"
+import WebsiteRepositoryContract from "@/domain/websites/contracts/WebsiteRepositoryContract.ts"
 
 class WebsiteRepository implements WebsiteRepositoryContract {
   public async all(): Promise<WebsiteCollection> {

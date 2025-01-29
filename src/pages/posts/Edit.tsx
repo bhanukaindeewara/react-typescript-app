@@ -1,22 +1,22 @@
-import App from "../../App.tsx"
+import App from "@/App.tsx"
 import { useState } from "react"
-import Label from "../../components/shared/Label.tsx"
-import Button from "../../components/shared/Button.tsx"
+import Label from "@/components/shared/Label.tsx"
+import Button from "@/components/shared/Button.tsx"
 import { NavigateFunction, useLoaderData, useNavigate } from "react-router-dom"
-import Post from "../../domain/posts/models/Post.ts"
-import UpdatePostInteractor from "../../domain/posts/interactors/UpdatePostInteractor.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import UpdatePostInteractor from "@/domain/posts/interactors/UpdatePostInteractor.ts"
 import { SubmitHandler, useForm } from "react-hook-form"
 import {
   PostRequest,
   PostSchema,
-} from "../../domain/posts/interactors/requests/PostRequest.ts"
+} from "@/domain/posts/interactors/requests/PostRequest.ts"
 import { zodResolver } from "@hookform/resolvers/zod"
-import Input from "../../components/shared/Input.tsx"
-import TextArea from "../../components/shared/TextArea.tsx"
-import Error from "../../components/shared/Error.tsx"
-import Validator from "../../plugins/Validator.ts"
+import Input from "@/components/shared/Input.tsx"
+import TextArea from "@/components/shared/TextArea.tsx"
+import Error from "@/components/shared/Error.tsx"
+import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
-import PostRepository from "../../domain/posts/repositories/PostRepository.ts"
+import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
 
 function Edit() {
   const navigate: NavigateFunction = useNavigate()

@@ -1,5 +1,5 @@
-import PostCollection from "../collections/PostCollection.ts"
-import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
+import PostCollection from "@/domain/posts/collections/PostCollection.ts"
+import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
 
 class ListWebsitePostsInteractor {
   constructor(protected postRepository: PostRepositoryContract) {}

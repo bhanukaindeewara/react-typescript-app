@@ -1,6 +1,6 @@
-import { SubscriberRequest } from "../interactors/requests/SubscriberRequest.ts"
-import Subscriber from "../models/Subscriber.ts"
-import SubscriberRepositoryContract from "../contracts/SubscriberRepositoryContract.ts"
+import { SubscriberRequest } from "@/domain/subscriber/interactors/requests/SubscriberRequest.ts"
+import Subscriber from "@/domain/subscriber/models/Subscriber.ts"
+import SubscriberRepositoryContract from "@/domain/subscriber/contracts/SubscriberRepositoryContract.ts"
 
 class FakeSubscriberRepository implements SubscriberRepositoryContract {
   private subscribers: Subscriber[]

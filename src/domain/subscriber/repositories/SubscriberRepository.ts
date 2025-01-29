@@ -1,6 +1,6 @@
-import { SubscriberRequest } from "../interactors/requests/SubscriberRequest.ts"
-import Http from "../../../plugins/Http.ts"
-import SubscriberRepositoryContract from "../contracts/SubscriberRepositoryContract.ts"
+import { SubscriberRequest } from "@/domain/subscriber/interactors/requests/SubscriberRequest.ts"
+import Http from "@/plugins/Http.ts"
+import SubscriberRepositoryContract from "@/domain/subscriber/contracts/SubscriberRepositoryContract.ts"
 
 class SubscriberRepository implements SubscriberRepositoryContract {
   public async create(subscriberRequest: SubscriberRequest) {

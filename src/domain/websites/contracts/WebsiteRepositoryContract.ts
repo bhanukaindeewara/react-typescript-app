@@ -1,5 +1,5 @@
-import WebsiteCollection from "../collections/WebsiteCollection.ts"
-import Website from "../models/Website.ts"
+import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.ts"
+import Website from "@/domain/websites/models/Website.ts"
 
 interface WebsiteRepositoryContract {
   find(websiteId: number): Promise<Website | undefined>

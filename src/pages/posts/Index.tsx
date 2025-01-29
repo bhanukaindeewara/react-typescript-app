@@ -1,14 +1,14 @@
-import App from "../../App.tsx"
-import Banner from "../../components/posts/Banner.tsx"
-import Card from "../../components/posts/Card.tsx"
-import Subscribe from "../../components/posts/Subscribe.tsx"
-import Website from "../../domain/websites/models/Website.ts"
-import Post from "../../domain/posts/models/Post.ts"
+import App from "@/App.tsx"
+import Banner from "@/components/posts/Banner.tsx"
+import Card from "@/components/posts/Card.tsx"
+import Subscribe from "@/components/posts/Subscribe.tsx"
+import Website from "@/domain/websites/models/Website.ts"
+import Post from "@/domain/posts/models/Post.ts"
 import { useEffect, useState } from "react"
 import { useLoaderData } from "react-router-dom"
-import ListWebsitePostsInteractor from "../../domain/posts/interactors/ListWebsitePostsInteractor.ts"
-import PostCollection from "../../domain/posts/collections/PostCollection.ts"
-import PostRepository from "../../domain/posts/repositories/PostRepository.ts"
+import ListWebsitePostsInteractor from "@/domain/posts/interactors/ListWebsitePostsInteractor.ts"
+import PostCollection from "@/domain/posts/collections/PostCollection.ts"
+import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
 
 function Index() {
   const [posts, setPosts] = useState<PostCollection>()

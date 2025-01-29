@@ -1,6 +1,9 @@
-import Post from "../models/Post.ts"
-import { PostRequest, PostSchema } from "./requests/PostRequest.ts"
-import PostRepositoryContract from "../contracts/PostRepositoryContract.ts"
+import Post from "@/domain/posts/models/Post.ts"
+import {
+  PostRequest,
+  PostSchema,
+} from "@/domain/posts/interactors/requests/PostRequest.ts"
+import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
 
 class UpdatePostInteractor {
   constructor(protected postRepository: PostRepositoryContract) {}
