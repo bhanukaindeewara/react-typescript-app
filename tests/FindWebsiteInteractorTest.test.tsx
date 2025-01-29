@@ -2,23 +2,21 @@ import { describe, expect, it } from "vitest"
 import FindWebsiteInteractor from "@/domain/websites/Interactors/FindWebsiteInteractor.ts"
 import FakeWebsiteRepository from "@/domain/websites/repositories/FakeWebsiteRepository.ts"
 import Website from "@/domain/websites/models/Website.ts"
+import { WebsiteRequest } from "@/domain/websites/Interactors/requests/WebsiteRequest.ts"
 
 describe("FindWebsiteInteractorTest", () => {
   it("should find a website", async () => {
-    const websites: Website[] = [
-      new Website({
-        id: 1,
-        title: "laravel.com",
-        description: "A PHP framework for web artisans.",
-      }),
-      new Website({
-        id: 2,
-        title: "react.dev",
-        description: "A JavaScript library for building user interfaces.",
-      }),
-    ]
-    const fakeWebsiteRepository = new FakeWebsiteRepository(websites)
-
+    const createWebsiteRequest01: WebsiteRequest = {
+      title: "laravel.com",
+      description: "A PHP framework for web artisans.",
+    }
+    const createWebsiteRequest02: WebsiteRequest = {
+      title: "react.dev",
+      description: "A JavaScript library for building user interfaces.",
+    }
+    const fakeWebsiteRepository = new FakeWebsiteRepository()
+    await fakeWebsiteRepository.create(createWebsiteRequest01)
+    await fakeWebsiteRepository.create(createWebsiteRequest02)
     const findWebsiteInteractor = new FindWebsiteInteractor(
       fakeWebsiteRepository,
     )

@@ -11,18 +11,18 @@ describe("ListWebsitePostsInteractorTest", () => {
     const listWebsitePostsInteractor = new ListWebsitePostsInteractor(
       fakePostRepository,
     )
-    const postRequest01: PostRequest = {
+    const createPostRequest01: PostRequest = {
       websiteId: 1,
       title: "Laravel: Introduction",
       description: "A beginner's guide to Laravel.",
     }
-    const postRequest02: PostRequest = {
+    const createPostRequest02: PostRequest = {
       websiteId: 1,
       title: "Laravel: Introduction",
       description: "A beginner's guide to Laravel.",
     }
-    await fakePostRepository.create(postRequest01)
-    await fakePostRepository.create(postRequest02)
+    await fakePostRepository.create(createPostRequest01)
+    await fakePostRepository.create(createPostRequest02)
     const websiteId = 1
 
     const response = await listWebsitePostsInteractor.execute(websiteId)
