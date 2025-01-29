@@ -53,7 +53,7 @@ function Subscribe({ websiteId }: SubscriberProps) {
   }
 
   return (
-    <div className="w-full p-12 sm:p-36 lg:p-40 bg-white border rounded-md flex flex-col gap-y-2">
+    <div className="w-full px-12 py-20 sm:p-36 lg:p-40 bg-white border rounded-md flex flex-col gap-y-2">
       <p className="text-center text-2xl sm:text-3xl text-gray-700">
         Stay in the loop! Get the latest updates straight to your inbox."
       </p>

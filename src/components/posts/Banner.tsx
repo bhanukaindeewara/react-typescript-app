@@ -15,7 +15,7 @@ function Banner({ title, description, websiteId }: BannerProps) {
   }
 
   return (
-    <div className="w-full p-12 sm:p-36 lg:p-40 bg-white border rounded-md flex flex-col gap-y-2 text-center">
+    <div className="w-full px-12 py-20 sm:p-36 lg:p-40 bg-white border rounded-md flex flex-col gap-y-2 text-center">
       <p className="text-4xl sm:text-7xl text-gray-800">{title}</p>
       <p className="text-xs text-gray-600">{description}</p>
       <Button type="button" onClick={navigateToPostsCreatPage} className="mt-4">
