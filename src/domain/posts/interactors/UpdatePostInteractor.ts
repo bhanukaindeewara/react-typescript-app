@@ -4,9 +4,15 @@ import {
   PostSchema,
 } from "@/domain/posts/interactors/requests/PostRequest.ts"
 import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
+import { inject, injectable } from "inversify"
+import Types from "@/core/types/Types.ts"
 
+@injectable()
 class UpdatePostInteractor {
-  constructor(protected postRepository: PostRepositoryContract) {}
+  constructor(
+    @inject(Types.PostRepositoryContract)
+    protected postRepository: PostRepositoryContract,
+  ) {}
 
   public async execute(post: Post, postRequest: PostRequest) {
     this.validateRequest(postRequest)

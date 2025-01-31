@@ -1,6 +1,5 @@
 import Button from "@/components/shared/Button.tsx"
 import Input from "@/components/shared/Input.tsx"
-import CreateSubscriberInteractor from "@/domain/subscriber/interactors/CreateSubscriberInteractor.ts"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import {
@@ -10,7 +9,7 @@ import {
 import Error from "@/components/shared/Error.tsx"
 import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
-import SubscriberRepository from "@/domain/subscriber/repositories/SubscriberRepository.ts"
+import { createSubscriberInteractor } from "@/core/di/di.ts"
 
 type SubscriberProps = {
   websiteId: number
@@ -33,9 +32,6 @@ function Subscribe({ websiteId }: SubscriberProps) {
     subscriberRequest: SubscriberRequest,
   ) => {
     try {
-      const createSubscriberInteractor = new CreateSubscriberInteractor(
-        new SubscriberRepository(),
-      )
       const response =
         await createSubscriberInteractor.execute(subscriberRequest)
 

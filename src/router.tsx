@@ -9,11 +9,8 @@ import PostsCreatePage from "@/pages/posts/Create.tsx"
 import PostsEditPage from "@/pages/posts/Edit.tsx"
 import NotFoundPage from "@/pages/errors/NotFound.tsx"
 import Post from "@/domain/posts/models/Post.ts"
+import { findPostInteractor, findWebsiteInteractor } from "@/core/di/di.ts"
 import Website from "@/domain/websites/models/Website.ts"
-import FindPostInteractor from "@/domain/posts/interactors/FindPostInteractor.ts"
-import FindWebsiteInteractor from "@/domain/websites/Interactors/FindWebsiteInteractor.ts"
-import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
-import WebsiteRepository from "@/domain/websites/repositories/WebsiteRepository.ts"
 
 const router = createBrowserRouter([
   {
@@ -30,9 +27,6 @@ const router = createBrowserRouter([
     loader: async ({
       params,
     }: LoaderFunctionArgs): Promise<Website | undefined> => {
-      const findWebsiteInteractor = new FindWebsiteInteractor(
-        new WebsiteRepository(),
-      )
       return await findWebsiteInteractor.execute(Number(params.websiteId))
     },
     errorElement: <NotFoundPage />,
@@ -43,9 +37,6 @@ const router = createBrowserRouter([
     loader: async ({
       params,
     }: LoaderFunctionArgs): Promise<Website | undefined> => {
-      const findWebsiteInteractor = new FindWebsiteInteractor(
-        new WebsiteRepository(),
-      )
       return await findWebsiteInteractor.execute(Number(params.websiteId))
     },
     errorElement: <NotFoundPage />,
@@ -56,7 +47,6 @@ const router = createBrowserRouter([
     loader: async ({
       params,
     }: LoaderFunctionArgs): Promise<Post | undefined> => {
-      const findPostInteractor = new FindPostInteractor(new PostRepository())
       return await findPostInteractor.execute(Number(params.postId))
     },
     errorElement: <NotFoundPage />,

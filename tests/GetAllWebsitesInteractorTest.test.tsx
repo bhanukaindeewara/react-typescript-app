@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest"
-import GetAllWebsitesIntercator from "@/domain/websites/Interactors/GetAllWebsitesIntercator.ts"
+import GetAllWebsitesIntercator from "@/domain/websites/interactors/GetAllWebsitesIntercator.ts"
 import FakeWebsiteRepository from "@/domain/websites/repositories/FakeWebsiteRepository.ts"
 import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.ts"
-import { WebsiteRequest } from "@/domain/websites/Interactors/requests/WebsiteRequest.ts"
+import { WebsiteRequest } from "@/domain/websites/interactors/requests/WebsiteRequest.ts"
 
 describe("GetAllWebsitesInteractorTest", () => {
   it("should get all the website", async () => {

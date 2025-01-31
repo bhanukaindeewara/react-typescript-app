@@ -8,7 +8,6 @@ import {
   PostSchema,
 } from "@/domain/posts/interactors/requests/PostRequest.ts"
 import { zodResolver } from "@hookform/resolvers/zod"
-import CreatePostInteractor from "@/domain/posts/interactors/CreatePostInteractor.ts"
 import Input from "@/components/shared/Input.tsx"
 import TextArea from "@/components/shared/TextArea.tsx"
 import Error from "@/components/shared/Error.tsx"
@@ -16,7 +15,7 @@ import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
 import { useState } from "react"
 import Website from "@/domain/websites/models/Website.ts"
-import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
+import { createPostInteractor } from "@/core/di/di.ts"
 
 function Create() {
   const navigate: NavigateFunction = useNavigate()
@@ -39,11 +38,7 @@ function Create() {
     postRequest: PostRequest,
   ) => {
     try {
-      const createPostInteractor = new CreatePostInteractor(
-        new PostRepository(),
-      )
       const response = await createPostInteractor.execute(postRequest)
-
       if (response?.errors) {
         Validator.validate(response, setError)
       } else {

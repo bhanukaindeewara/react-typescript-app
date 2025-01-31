@@ -2,7 +2,9 @@ import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.t
 import Website from "@/domain/websites/models/Website.ts"
 import Http from "@/plugins/Http.ts"
 import WebsiteRepositoryContract from "@/domain/websites/contracts/WebsiteRepositoryContract.ts"
+import { injectable } from "inversify"
 
+@injectable()
 class WebsiteRepository implements WebsiteRepositoryContract {
   public async all(): Promise<WebsiteCollection> {
     const response: Response = await Http.get("/websites")

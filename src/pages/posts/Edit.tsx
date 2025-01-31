@@ -4,7 +4,6 @@ import Label from "@/components/shared/Label.tsx"
 import Button from "@/components/shared/Button.tsx"
 import { NavigateFunction, useLoaderData, useNavigate } from "react-router-dom"
 import Post from "@/domain/posts/models/Post.ts"
-import UpdatePostInteractor from "@/domain/posts/interactors/UpdatePostInteractor.ts"
 import { SubmitHandler, useForm } from "react-hook-form"
 import {
   PostRequest,
@@ -16,7 +15,7 @@ import TextArea from "@/components/shared/TextArea.tsx"
 import Error from "@/components/shared/Error.tsx"
 import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
-import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
+import { updatePostInteractor } from "@/core/di/di.ts"
 
 function Edit() {
   const navigate: NavigateFunction = useNavigate()
@@ -43,9 +42,6 @@ function Edit() {
     postRequest: PostRequest,
   ) => {
     try {
-      const updatePostInteractor = new UpdatePostInteractor(
-        new PostRepository(),
-      )
       const response = await updatePostInteractor.execute(post, postRequest)
       if (response?.errors) {
         Validator.validate(response, setError)

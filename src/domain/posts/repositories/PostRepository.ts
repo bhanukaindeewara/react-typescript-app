@@ -3,7 +3,9 @@ import PostCollection from "@/domain/posts/collections/PostCollection.ts"
 import { PostRequest } from "@/domain/posts/interactors/requests/PostRequest.ts"
 import Http from "@/plugins/Http.ts"
 import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
+import { injectable } from "inversify"
 
+@injectable()
 class PostRepository implements PostRepositoryContract {
   public async create(postRequest: PostRequest) {
     const response: Response = await Http.post("/posts", postRequest)
