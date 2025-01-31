@@ -1,20 +1,16 @@
 import Card from "@/components/websites/Card.tsx"
 import App from "@/App.tsx"
 import Website from "@/domain/websites/models/Website.ts"
-import GetAllWebsitesIntercator from "@/domain/websites/Interactors/GetAllWebsitesIntercator.ts"
 import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.ts"
 import { useEffect, useState } from "react"
-import WebsiteRepository from "@/domain/websites/repositories/WebsiteRepository.ts"
+import { getAllWebsitesInteractor } from "@/core/di/di.ts"
 
 function Index() {
   const [websiteCollection, setWebsiteCollection] =
     useState<WebsiteCollection>()
 
   useEffect((): void => {
-    const getAllWebsitesIntercator = new GetAllWebsitesIntercator(
-      new WebsiteRepository(),
-    )
-    getAllWebsitesIntercator
+    getAllWebsitesInteractor
       .execute()
       .then((websiteCollection: WebsiteCollection): void => {
         setWebsiteCollection(websiteCollection)

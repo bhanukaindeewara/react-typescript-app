@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest"
-import FindWebsiteInteractor from "@/domain/websites/Interactors/FindWebsiteInteractor.ts"
+import FindWebsiteInteractor from "@/domain/websites/interactors/FindWebsiteInteractor.ts"
 import FakeWebsiteRepository from "@/domain/websites/repositories/FakeWebsiteRepository.ts"
 import Website from "@/domain/websites/models/Website.ts"
-import { WebsiteRequest } from "@/domain/websites/Interactors/requests/WebsiteRequest.ts"
+import { WebsiteRequest } from "@/domain/websites/interactors/requests/WebsiteRequest.ts"
 
 describe("FindWebsiteInteractorTest", () => {
   it("should find a website", async () => {

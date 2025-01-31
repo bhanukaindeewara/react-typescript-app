@@ -6,9 +6,8 @@ import Website from "@/domain/websites/models/Website.ts"
 import Post from "@/domain/posts/models/Post.ts"
 import { useEffect, useState } from "react"
 import { useLoaderData } from "react-router-dom"
-import ListWebsitePostsInteractor from "@/domain/posts/interactors/ListWebsitePostsInteractor.ts"
 import PostCollection from "@/domain/posts/collections/PostCollection.ts"
-import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
+import { listWebsitePostsInteractor } from "@/core/di/di.ts"
 
 function Index() {
   const [posts, setPosts] = useState<PostCollection>()
@@ -16,9 +15,6 @@ function Index() {
   const [website] = useState<Website>({ ...useLoaderData() })
 
   useEffect((): void => {
-    const listWebsitePostsInteractor = new ListWebsitePostsInteractor(
-      new PostRepository(),
-    )
     listWebsitePostsInteractor
       .execute(website.id)
       .then((posts: PostCollection): void => {

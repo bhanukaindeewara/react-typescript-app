@@ -1,7 +1,7 @@
 import Website from "@/domain/websites/models/Website.ts"
 import WebsiteCollection from "@/domain/websites/collections/WebsiteCollection.ts"
 import WebsiteRepositoryContract from "@/domain/websites/contracts/WebsiteRepositoryContract.ts"
-import { WebsiteRequest } from "@/domain/websites/Interactors/requests/WebsiteRequest.ts"
+import { WebsiteRequest } from "@/domain/websites/interactors/requests/WebsiteRequest.ts"
 
 class FakeWebsiteRepository implements WebsiteRepositoryContract {
   private websites: Website[]
