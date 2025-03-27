@@ -1,21 +1,20 @@
 import Post from "@/domain/posts/models/Post.ts"
-import {
-  PostRequest,
-  PostSchema,
-} from "@/domain/posts/interactors/requests/PostRequest.ts"
+import PostRequest from "@/domain/posts/interactors/requests/PostRequest.ts"
 import PostRepositoryContract from "@/domain/posts/contracts/PostRepositoryContract.ts"
+import { validateOrReject } from "class-validator"
+import { plainToInstance } from "class-transformer"
 
 class UpdatePostInteractor {
   constructor(protected postRepository: PostRepositoryContract) {}
 
   public async execute(post: Post, postRequest: PostRequest) {
-    this.validateRequest(postRequest)
+    await this.validateRequest(postRequest)
 
     return await this.postRepository.update(post, postRequest)
   }
 
-  protected validateRequest(postRequest: PostRequest) {
-    return PostSchema.parse(postRequest)
+  protected async validateRequest(postRequest: PostRequest) {
+    return await validateOrReject(plainToInstance(PostRequest, postRequest))
   }
 }
 
