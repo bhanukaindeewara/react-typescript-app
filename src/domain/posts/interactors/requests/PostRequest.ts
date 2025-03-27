@@ -1,13 +1,18 @@
-import { z } from "zod"
+import { IsInt, IsNotEmpty, IsPositive, IsString } from "class-validator"
 
-const PostSchema = z.object({
-  websiteId: z.number().int().positive("The websiteId must be greater than 0"),
-  title: z.string().min(1, "The title filed is required"),
-  description: z.string().min(1, "The description filed is required"),
-})
+class PostRequest {
+  @IsInt()
+  @IsPositive()
+  @IsNotEmpty()
+  public websiteId: number
 
-type PostRequest = z.infer<typeof PostSchema>
+  @IsString()
+  @IsNotEmpty()
+  public title: string
 
-export { PostSchema }
+  @IsString()
+  @IsNotEmpty()
+  public description: string
+}
 
-export type { PostRequest }
+export default PostRequest

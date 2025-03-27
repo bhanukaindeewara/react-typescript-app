@@ -6,17 +6,14 @@ import { NavigateFunction, useLoaderData, useNavigate } from "react-router-dom"
 import Post from "@/domain/posts/models/Post.ts"
 import UpdatePostInteractor from "@/domain/posts/interactors/UpdatePostInteractor.ts"
 import { SubmitHandler, useForm } from "react-hook-form"
-import {
-  PostRequest,
-  PostSchema,
-} from "@/domain/posts/interactors/requests/PostRequest.ts"
-import { zodResolver } from "@hookform/resolvers/zod"
+import PostRequest from "@/domain/posts/interactors/requests/PostRequest.ts"
 import Input from "@/components/shared/Input.tsx"
 import TextArea from "@/components/shared/TextArea.tsx"
 import Error from "@/components/shared/Error.tsx"
 import Validator from "@/plugins/Validator.ts"
 import toast from "react-hot-toast"
 import PostRepository from "@/domain/posts/repositories/PostRepository.ts"
+import { classValidatorResolver } from "@hookform/resolvers/class-validator"
 
 function Edit() {
   const navigate: NavigateFunction = useNavigate()
@@ -36,7 +33,7 @@ function Edit() {
       title: post.title,
       description: post.description,
     },
-    resolver: zodResolver(PostSchema),
+    resolver: classValidatorResolver(PostRequest),
   })
 
   const onSubmit: SubmitHandler<PostRequest> = async (
